@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Toggle the navigation menu
   hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
-      hamburger.classList.toggle('active'); // Toggle the logo display
+      hamburger.classList.toggle('active'); // Toggle the hamburger button active state
   });
 
   // Close the menu when a nav link is clicked
@@ -36,31 +36,11 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("scroll", function() {
       if (window.scrollY > 50) {
           navbar.classList.add("scrolled");
-          
       } else {
           navbar.classList.remove("scrolled");
-          
       }
   });
 });
-
-
-
-// Change navbar color and logo visibility on scroll
-window.addEventListener("scroll", function () {
-  const scrollY = window.scrollY;
-  
-  if (scrollY > 50) {
-      navbar.classList.add("scrolled");
-      logo.style.display = "none";  // Hide the first logo
-      logo2.style.display = "block"; // Show the second logo
-  } else {
-      navbar.classList.remove("scrolled");
-      logo.style.display = "block";  // Show the first logo
-      logo2.style.display = "none";   // Hide the second logo
-  }
-});
-
 
 
 
@@ -103,76 +83,108 @@ const scrollRevealOption = {
     delay: 500,
   });
   
-  ScrollReveal().reveal(".blog .section__subheader", {
-    ...scrollRevealOption,
-    delay: 500,
-    origin: "right",
-  });
-
-  ScrollReveal().reveal(".blog .blog-title", {
-    ...scrollRevealOption,
-    delay: 600,
-    origin: "left",
-  });
-  
   ScrollReveal().reveal(".about__btn", {
     ...scrollRevealOption,
     delay: 2000,
   });
   
-  // room container
-  ScrollReveal().reveal(".blog-card", {
+  ScrollReveal().reveal(".read-more-btn", {
     ...scrollRevealOption,
-    interval: 500,
+    interval: 200,
   });
   
-  // service container
-  ScrollReveal().reveal(".contact-info h3", {
+  ScrollReveal().reveal(".about2__image img", {
     ...scrollRevealOption,
-    interval: 200,
     origin: "right",
-  });
-    
-  ScrollReveal().reveal(".input-group input", {
-    ...scrollRevealOption,
-    interval: 100,
-  });
-
-  ScrollReveal().reveal(".practice-item", {
-    ...scrollRevealOption,
-    interval: 200,
-  });
-
-  ScrollReveal().reveal(".contact-title", {
-    ...scrollRevealOption,
-    interval: 200,
-  });
-
-  ScrollReveal().reveal(".contact-subtitle", {
-    ...scrollRevealOption,
     interval: 500,
   });
-
-  ScrollReveal().reveal(".btn-submit", {
+  ScrollReveal().reveal(".about2__content h1", {
     ...scrollRevealOption,
-    interval: 200,
+    delay: 1500,
   });
-
-  ScrollReveal().reveal(".contact-form textarea", {
+  ScrollReveal().reveal(".about2__content .section__description", {
     ...scrollRevealOption,
+    delay: 1500,
+  });
+  ScrollReveal().reveal(".about2__content form", {
+    ...scrollRevealOption,
+    delay: 2500,
+  });
+  
+  ScrollReveal().reveal(".qualifications__image img", {
+    ...scrollRevealOption,
+    origin: "left",
+  });
+  ScrollReveal().reveal(".qualifications__content .section__subheader", {
+    ...scrollRevealOption,
+    delay: 500,
+  });
+  ScrollReveal().reveal(".qualifications__content .section__header", {
+    ...scrollRevealOption,
+    delay: 1000,
+  });
+  ScrollReveal().reveal(".qualifications__list li", {
+    ...scrollRevealOption,
+    delay: 1000,
     interval: 500,
   });
-
-  ScrollReveal().reveal(".contact-info p", {
+  ScrollReveal().reveal(".skills__image img", {
     ...scrollRevealOption,
-    interval: 200,
+    origin: "right",
+    interval: 500,
   });
+  ScrollReveal().reveal(".skills-list", {
+    ...scrollRevealOption,
+    origin: "left",
+  });
+  ScrollReveal().reveal(".certificate-card", {
+    ...scrollRevealOption,
+    delay: 1000,
+    interval: 500,
+  });
+ 
+  
 
 
+  const swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    loop: true,
+  });
+  
 
-//   whatsapp
-document.getElementById("whatsapp-button").addEventListener("click", function() {
-    const phoneNumber = "+1234567890"; // Replace with lawyer's WhatsApp number
+  
+  const next = document.getElementById("next");
+  const prev = document.getElementById("prev");
+  const conferencesCards = Array.from(document.querySelectorAll(".conferences__card"));
+  
+  next.addEventListener("click", (e) => {
+    for (let index = 0; index < conferencesCards.length; index++) {
+      if (conferencesCards[index].classList.contains("active")) {
+        const nextIndex = (index + 1) % conferencesCards.length;
+        conferencesCards[index].classList.remove("active");
+        conferencesCards[nextIndex].classList.add("active");
+        break;
+      }
+    }
+  });
+  
+  prev.addEventListener("click", (e) => {
+    for (let index = 0; index < conferencesCards.length; index++) {
+      if (conferencesCards[index].classList.contains("active")) {
+        const prevIndex = (index ? index : conferencesCards.length) - 1;
+        conferencesCards[index].classList.remove("active");
+        conferencesCards[prevIndex].classList.add("active");
+        break;
+      }
+    }
+  });
+  
+ 
+
+  // whatsapp
+  document.getElementById("whatsapp-button").addEventListener("click", function() {
+    const phoneNumber = "+2349037711141"; // Replace with lawyer's WhatsApp number
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -218,9 +230,52 @@ document.getElementById("whatsapp-button").addEventListener("click", function() 
     }
 
     // Construct the WhatsApp message
-    let whatsappMessage = `Hello, my name is ${name}. My phone number is ${phone}. My email is ${email}. %0A%0A${message}`;
+    let whatsappMessage = `Hello, my name is ${name}. My phone number is ${phone}. My email is ${email}. I want to discuss about ${message}`;
     whatsappMessage = encodeURIComponent(whatsappMessage);
 
     // Redirect to WhatsApp chat
     window.open(`https://wa.me/${phoneNumber}?text=${whatsappMessage}`, "_blank");
 });
+
+
+
+
+
+function myFunction() {
+  console.log("Function called");
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    console.log("Hiding dots and showing more text");
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more";
+    moreText.style.display = "none";
+  } else {
+    console.log("Showing dots and hiding more text");
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less";
+    moreText.style.display = "inline";
+  }
+}
+
+function myFunction2() {
+  console.log("Function2 called");
+  var dots2 = document.getElementById("dots2");
+  var moreText2 = document.getElementById("more2");
+  var btnText2 = document.getElementById("myBtn2");
+
+  if (dots2.style.display === "none") {
+    console.log("Hiding dots and showing more text");
+    dots2.style.display = "inline";
+    btnText2.innerHTML = "Read more";
+    moreText2.style.display = "none";
+  } else {
+    console.log("Showing dots and hiding more text");
+    dots2.style.display = "none";
+    btnText2.innerHTML = "Read less";
+    moreText2.style.display = "inline";
+  }
+}
+
