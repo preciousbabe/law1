@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./welcome.css">
+  <link rel="stylesheet" href="./achive.css">
 </head>
 <body>
     <!-- nav -->
@@ -15,7 +17,7 @@
         <div class="nav-container">
           <div class="nav-left">
             <a href="#" class="logo">
-              <img src="./img/blacklogo.png" alt="logo" class="logo">
+              <img src="./img/logo.png" alt="logo" class="logo">
             </a>
           </div>
           <div class="nav-right">
@@ -25,10 +27,10 @@
               <span class="bar"></span>
             </button>
             <ul class="nav-links" id="nav-links">
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#licenses">Licenses</a></li>
-              <li><a href="#awards">Awards</a></li>
+              <li><a href="./index.html" class="links">Home</a></li>
+              <li><a href="./about.html" class="links">About</a></li>
+              <li><a href="./license.html" class="links">Licenses</a></li>
+              <li><a href="./award.html" class="links">Awards</a></li>
               <li><a href="#workshops">Workshops</a></li>
               <li><a href="#skills">Skills</a></li>
               <li><a href="#contact">Contact</a></li>
@@ -36,6 +38,10 @@
           </div>
         </div>
       </nav>
+
+      <div class="loader-container" id="loader">
+        <div class="loader-37"></div>
+    </div>
 
   <!-- Hero Section -->
   <section id="hero" class="hero"> 
@@ -49,277 +55,75 @@
         </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" >
-    <div class="container">
-      <div class="about-section">
-      <div class="about-write-up">
-       <h1 class="abouth1">Meet Barr Miracle Oluchi Ogba</h1>
-       <p>
-        Miracle Oluchi Ogba is a highly accomplished legal professional with a strong
-        commitment to human rights and a proven ability to excel in diverse academic and
-        professional settings. Her academic journey culminated in a Master of Laws (LLM)
-        degree with distinction from Queen Mary University of London, further solidifying her
-        expertise in legal studies. This degree followed a distinguished Bachelor of Laws
-        (LL.B) degree, also earning first-class honors, from Abia State University.
-        Complementing her academic achievements, Ogba completed the Barrister-at-Law
-        (BL) program at the prestigious Nigerian Law School, again attaining first-class
-        honors, which led to her licensure as a Barrister and Solicitor of the Supreme Court
-        of Nigeria. <span id="dots">...</span>
-        <span id="more">
-          Ogba’s professional experience reflects her dedication and adaptability. Since 2020,
-          she has served as an Assistant Lecturer at Abia State University, significantly
-          contributing to the legal education of undergraduates and actively participating in
-          designing and implementing both in-person and virtual curricula. Simultaneously,
-          she has developed extensive practical legal skills, including experience at Legal Unit,
-          University of Nigeria Nsukka and Onah and Onah Associate, gaining experience
-          working within legal teams and in litigation. Her roles involved legal research and
-          drafting, client interviewing, representing organizations in court, and providing legal
-          opinions on diverse issues. This demonstrably multifaceted experience allowed her
-          to develop a diverse skillset, including legal writing, case analysis, advocacy, and
-          effective communication.
-       </span>
-      </p>
-      <button onclick="myFunction()" id="myBtn" class="read-more-btn">Read more</button>
+  <!-- welcome Section -->
+   <section class="welcome-section">
+  <div class="welcome-container">
+    <!-- Slideshow Section (75% width) -->
+    <div class="welcome-slideshow">
+        <div class="welcome-slide fade">
+            <img src="img/e17.jpg" alt="Slide 1">
+        </div>
+        <div class="welcome-slide fade">
+            <img src="img/e14.jpg" alt="Slide 2">
+        </div>
+        <div class="welcome-slide fade">
+            <img src="img/e4.jpg" alt="Slide 3">
+        </div>
+        <div class="welcome-slide fade">
+          <img src="img/e3.jpg" alt="Slide 3">
       </div>
-      <div class="about-img">
-       <img src="./img/about.jpg" alt="">
-      </div>
+      <div class="welcome-slide fade">
+        <img src="img/e22.jpg" alt="Slide 3">
     </div>
+    <div class="welcome-slide fade">
+      <img src="img/e20.jpg" alt="Slide 3">
+  </div>
+        <button class="welcome-prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="welcome-next" onclick="changeSlide(1)">&#10095;</button>
     </div>
+
+    <!-- Welcome Card (25% width) -->
+    <div class="welcome-card">
+        <img src="./img/about.jpg" alt="Owner" class="welcome-owner-img">
+        <h2>Hi dear,</h2>
+        <p>I’m Barr. Miracle Ogba, and I’m so happy to connect with you! As an African woman, lawyer, and passionate advocate for human rights, I've spent over a decade dedicated to community building and making a difference.
+
+          One of my favorite quotes is, "The mind is everything. What you think you become." This belief inspires me every day in both my professional and personal life.
+          
+          Welcome to my page! Feel free to explore and join me on this exciting journey. Together, let’s create a positive impact in our communities!</p>
     
-  <svg class="clippy">
-    <defs>
-      <clipPath id="clip-squiggle" clipPathUnits="objectBoundingBox">
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M0.362548 0.000261969C0.368874 0.000351152 0.374379 0.00042876 0.378864 0.00042876C0.415802 0.00042876 0.45374 0.000629291 0.492229 0.00155783C0.59285 0.00398527 0.692839 0.00739029 0.79273 0.0113364L0.906222 0.0158198L0.897581 0.103205C0.979992 0.123637 0.997368 0.173737 0.999628 0.198793C1.00209 0.226055 0.992075 0.253657 0.977554 0.27385C0.965158 0.291087 0.948172 0.304761 0.929225 0.315641C0.940428 0.320962 0.95224 0.328367 0.961827 0.338593C0.976366 0.354101 0.980718 0.369748 0.982401 0.378935C0.984306 0.389328 0.984104 0.399375 0.983094 0.407935C0.981355 0.422678 0.975879 0.443814 0.961923 0.461456C0.947834 0.479267 0.92719 0.491165 0.909709 0.498846C0.936433 0.514074 0.955578 0.534927 0.962508 0.560952C0.962592 0.561266 0.962728 0.561711 0.962901 0.56228C0.965409 0.570497 0.975762 0.604418 0.948955 0.636951C0.921104 0.67075 0.871391 0.68746 0.843046 0.69541C0.834306 0.697861 0.825475 0.70004 0.81691 0.70197C0.821658 0.70231 0.826247 0.702705 0.83019 0.703157C0.842204 0.704535 0.86546 0.707789 0.888483 0.717055C0.915324 0.727858 0.947277 0.749782 0.94889 0.783427C0.950284 0.812503 0.931827 0.835216 0.915326 0.849646C0.898992 0.86393 0.879858 0.874338 0.866723 0.880811C0.813779 0.906902 0.75662 0.919849 0.705648 0.927688C0.672604 0.93277 0.634687 0.936567 0.603296 0.93971C0.590638 0.940978 0.579041 0.942139 0.569252 0.943235C0.502166 0.95075 0.434809 0.957182 0.369152 0.963453C0.366262 0.963729 0.363376 0.964004 0.360493 0.96428L0.332236 1L0.12882 0.935714L0.179674 0.871427C0.190527 0.857708 0.205416 0.848258 0.220008 0.841755C0.182321 0.834892 0.144643 0.823709 0.10939 0.806088C0.0823555 0.792575 0.028332 0.764295 0.00850157 0.71938C0.0100887 0.722975 0.00489299 0.71227 0.00262036 0.704523C0.00138206 0.700301 -0.000809846 0.691689 0.000308053 0.681393C0.00114062 0.673726 0.00548671 0.646952 0.0442408 0.62705C0.0599767 0.618968 0.0758595 0.614477 0.0860955 0.611999C0.0968955 0.609384 0.106938 0.607716 0.114018 0.606654C0.120265 0.605717 0.126517 0.604924 0.130348 0.604438C0.130821 0.604378 0.131258 0.604322 0.131653 0.604272C0.134858 0.603863 0.136082 0.603688 0.136252 0.603668C0.139933 0.603021 0.143845 0.602325 0.147927 0.601598C0.162321 0.599038 0.178845 0.596098 0.19492 0.593575C0.227366 0.588482 0.259845 0.586082 0.292966 0.586193C0.325181 0.586301 0.357792 0.587258 0.387583 0.588131C0.389953 0.588201 0.392305 0.58827 0.394638 0.588338C0.350953 0.583881 0.305331 0.576899 0.260312 0.565087C0.26027 0.565076 0.260111 0.565037 0.259844 0.564971C0.256517 0.564154 0.236517 0.559241 0.220218 0.553876C0.210851 0.550793 0.197204 0.545875 0.183897 0.538845C0.172642 0.532899 0.148158 0.518523 0.138141 0.494604C0.136093 0.489712 0.132426 0.48008 0.132723 0.468579C0.132931 0.460493 0.135248 0.448922 0.144089 0.43686C0.141573 0.436471 0.139066 0.436064 0.136571 0.435637C0.10994 0.431078 0.0542698 0.419025 0.0229327 0.381133C0.0111872 0.366931 0.00718484 0.350923 0.00568297 0.344711C0.00335186 0.335068 0.00183088 0.323999 0.00170699 0.312964C0.00159259 0.302775 0.00257368 0.288372 0.00855497 0.273964C0.0115276 0.266803 0.0172284 0.255892 0.0290347 0.244877C0.041356 0.233382 0.0644277 0.218262 0.101629 0.212128C0.120809 0.208966 0.14013 0.206886 0.159252 0.205646C0.147805 0.202129 0.136131 0.197527 0.125054 0.191473C0.0841008 0.169091 0.0696662 0.137486 0.0750791 0.107378C0.0875056 0.0382591 0.183535 0.0139996 0.226541 0.00700392C0.27553 -0.000964801 0.329942 -0.000197699 0.362548 0.000261969ZM0.422387 0.220334C0.465206 0.223418 0.507747 0.225365 0.549559 0.225801C0.526197 0.224931 0.503274 0.223911 0.480985 0.222909C0.478914 0.222816 0.47685 0.222723 0.47479 0.22263C0.456953 0.221827 0.439526 0.221043 0.422387 0.220334ZM0.776017 0.209295C0.77602 0.209295 0.775972 0.209321 0.775866 0.20937C0.775962 0.209319 0.776015 0.209294 0.776017 0.209295ZM0.261914 0.536132C0.261899 0.536129 0.262171 0.536123 0.262775 0.536122C0.262231 0.536135 0.261928 0.536135 0.261914 0.536132ZM0.318722 0.968151C0.318715 0.968152 0.318783 0.968145 0.318934 0.968131C0.318802 0.968145 0.318729 0.968151 0.318722 0.968151ZM0.194947 0.29669C0.194756 0.296652 0.194667 0.296632 0.19467 0.296631C0.194673 0.29663 0.194768 0.296649 0.194947 0.29669ZM0.249418 0.0742152C0.249419 0.0742148 0.249467 0.07422 0.249559 0.074232C0.249463 0.0742217 0.249417 0.0742157 0.249418 0.0742152ZM0.279021 0.147074C0.278983 0.147086 0.278963 0.147091 0.278963 0.147091C0.278963 0.147091 0.278982 0.147085 0.279021 0.147074Z"
-          fill="black"
-        />
-      </clipPath>
-    </defs>
-    </svg>
-  </section>
+          <ul class="welcome__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-instagram-line"></i></a>
+            </li>
+          </ul>
+        </div>
+</div>
+</section>
 
-  <section class="section__container about2__container" id="home">
-    <div class="about2__content">
-      <p class="section__description">
-          Miracle Oluchi Ogba is a highly accomplished legal professional with a strong
-  commitment to human rights and a proven ability to excel in diverse academic and
-  professional settings. Her academic journey culminated in a Master of Laws (LLM)
-  degree with distinction from Queen Mary University of London, further solidifying her
-  expertise in legal studies. This degree followed a distinguished Bachelor of Laws
-  (LL.B) degree, also earning first-class honors, from Abia State University.
-  Complementing her academic achievements, Ogba completed the Barrister-at-Law
-  (BL) program at the prestigious Nigerian Law School, again attaining first-class
-  honors, which led to her licensure as a Barrister and Solicitor of the Supreme Court
-  of Nigeria. <span id="dots2">...</span>
-          <span id="more2">
-            Ogba’s professional experience reflects her dedication and adaptability. Since 2020,
-            she has served as an Assistant Lecturer at Abia State University, significantly
-            contributing to the legal education of undergraduates and actively participating in
-            designing and implementing both in-person and virtual curricula. Simultaneously,
-            she has developed extensive practical legal skills, including experience at Legal Unit,
-            University of Nigeria Nsukka and Onah and Onah Associate, gaining experience
-            working within legal teams and in litigation. Her roles involved legal research and
-            drafting, client interviewing, representing organizations in court, and providing legal
-            opinions on diverse issues. This demonstrably multifaceted experience allowed her
-            to develop a diverse skillset, including legal writing, case analysis, advocacy, and
-            effective communication.
-         </span>
-        </p>
-        <button onclick="myFunction2()" id="myBtn2" class="read-more-btn">Read more</button>
-    </div>
-    <div class="about2__image">
-      <img src="img/l1.jpg" alt="header" />
-      <img src="img/l2.jpg" alt="header" />
-      <img src="img/l3.jpg" alt="header" />
-      <img src="img/l4.jpg" alt="bg" />
-    </div>
-  </section>
-
-   <!-- qualification -->
-   <section class="section__container qualifications__container" id="licenses">
-    <div class="qualifications__image">
-      <img src="./img/l5.jpg" alt="choose" />
-    </div>
-    <div class="qualifications__content">
-      <p class="section__subheader">Qualifications</p>
-      <h2 class="section__header">And <span>Licenses</span></h2>
-      <ul class="qualifications__list">
-        <li>
-          <span><i class="ri-verified-badge-fill"></i></span>
-          <div>
-            <h4>2023-2024<span>LLM (Master of Laws)</span> </h4>
-            <p>
-              Distinction Queen Mary University of London United Kingdom
-            </p>
-          </div>
-        </li>
-        <li>
-          <span><i class="ri-shield-check-fill"></i></span>
-          <div>
-            <h4>2018 – 2019<span>BL (Barrister-At-Law)</span> </h4>
-            <p>
-              First Class Nigerian Law School Lagos Nigeria
-            </p>
-          </div>
-        </li>
-        <li>
-          <span><i class="ri-graduation-cap-fill"></i></span>
-          <div>
-            <h4>2013 – 2018<span>LL.B (Bachelor of Laws)</span> </h4>
-            <p>
-              First Class Abia State University Uturu Nigeria
-            </p>
-          </div>
-        </li>
-        <li>
-          <span><i class="ri-shield-star-fill"></i></span>
-          <div>
-            <h4>2019 – Date<span>Barrister and Solicitor</span> </h4>
-            <p>
-              Supreme Court of Nigeria
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-    
-  <!-- certificate -->
-  <section class="certificate-container" id="awards">
-    <p class="section__subheader">Her Awards & Certificates</p>
-    <div class="certificate-card">
-        <i class="ri-trophy-fill icon"></i>
-        <div class="certificate-content">
-            <h3>Certificate of Completion of the key essentials on the “Convention on
-              the Rights of the Child, Sustainable Development and the Law” Under Democratizing Education for Global Sustainability and Justice</h3>
-            <p class="organization">Issued by: Hughes Hall and Lucy Cavendish College Cambridge University</p>
-            <p class="date">Date: June 2024.</p>
+   <!-- achievement -->
+   <section class="achievements">
+    <h2 class="achieveh2">Achievements</h2>
+     <div class="boxes">
+    <div class="achievement-box">
+        <div class="achievement-image awards">
+            <h2><span></span> Awards <span></span></h2>
         </div>
     </div>
 
-    <div class="certificate-card">
-        <i class="ri-trophy-fill icon"></i>
-        <div class="certificate-content">
-            <h3>Chevening Certificate Silver Award for Volunteering over 50 hours in
-              the UK</h3>
-            <p class="organization">Issued by: The Foreign Commonwealth and Development Office</p>
-            <p class="date">Date: June 2024.</p>
+    <div class="achievement-box">
+        <div class="achievement-image qualifications">
+            <h2><span></span> Qualifications <span></span></h2>
         </div>
     </div>
-    <div class="certificate-card">
-      <i class="ri-trophy-fill icon"></i>
-      <div class="certificate-content">
-          <h3>Certificate Award of the Sustainability Volunteer of the Year 2024</h3>
-          <p class="organization">Issued by: Queen Mary University of London Student Union</p>
-          <p class="date">Date: March 2024</p>
-      </div>
-  </div>
-
-  <div class="certificate-card">
-    <i class="ri-trophy-fill icon"></i>
-    <div class="certificate-content">
-        <h3>Certification of Recognition by the Foreign Commonwealth and
-          Development Office on winning the Chevening Scholarship Award</h3>
-        <p class="organization">Issued by: Commonwealth and
-          Development Office</p>
-        <p class="date">Date: August 2023.</p>
     </div>
-</div>
-
-<div class="certificate-card">
-  <i class="ri-trophy-fill icon"></i>
-  <div class="certificate-content">
-      <h3>Certificate of the International rights of a child</h3>
-      <p class="organization">Issued by: YALI Africa</p>
-      <p class="date">Date: March 2023.</p>
-  </div>
-</div>
-
-<div class="certificate-card">
-  <i class="ri-trophy-fill icon"></i>
-  <div class="certificate-content">
-      <h3>Certificate on Understanding the Rights of Women and Girls</h3>
-      <p class="organization">Issued by: YALI Africa</p>
-      <p class="date">Date: May 2023</p>
-  </div>
-</div>
-
-<div class="certificate-card">
-  <i class="ri-trophy-fill icon"></i>
-  <div class="certificate-content">
-      <h3>Certificate on Understanding Human Rights</h3>
-      <p class="organization">Issued by: YALI Africa</p>
-      <p class="date">Date: May 2023</p>
-  </div>
-</div>
-
-<div class="certificate-card">
-  <i class="ri-trophy-fill icon"></i>
-  <div class="certificate-content">
-      <h3>Certificate on Introduction to International Conflict Resolution</h3>
-      <p class="organization">Issued by: La Plage Meta Verse</p>
-      <p class="date">Date: May 2023</p>
-  </div>
-</div>
-
-<div class="certificate-card">
-  <i class="ri-trophy-fill icon"></i>
-  <div class="certificate-content">
-      <h3>Certificate on International Volunteering</h3>
-      <p class="organization">Issued by: La Plage Meta Verse</p>
-      <p class="date">Date: May 2023</p>
-  </div>
-</div>
-
-<div class="certificate-card">
-  <i class="ri-trophy-fill icon"></i>
-  <div class="certificate-content">
-      <h3>Certificate on International Human Resource Management</h3>
-      <p class="organization">Issued by: Harvard Law School</p>
-      <p class="date">Date: June 2023 </p>
-  </div>
-</div>
-
-<div class="certificate-card">
-  <i class="ri-trophy-fill icon"></i>
-  <div class="certificate-content">
-      <h3>Certificate on Digital Communications and Team Management</h3>
-      <p class="organization">Issued by: La Plage Meta Verse</p>
-      <p class="date">Date: May 2023</p>
-  </div>
-</div>
-
-<div class="certificate-card">
-  <i class="ri-trophy-fill icon"></i>
-  <div class="certificate-content">
-      <h3>Certificate of Business Management</h3>
-      <p class="organization">Issued by: Tony Elumelu Foundation.</p>
-      <p class="date">Date: June 2022</p>
-  </div>
-</div>
-
-    <div class= "certificate-card">
-        <i class="ri-trophy-fill icon"></i>
-        <div class="certificate-content">
-            <h3>Africa’s Agenda 2063 Goodwill Digital Ambassador Certificate</h3>
-            <p class="organization">Issued by: La Plage Meta Verse</p>
-            <p class="date">Date: June 2023</p>
-        </div>
-    </div>
-
-    <div class="certificate-card">
-      <i class="ri-trophy-fill icon"></i>
-      <div class="certificate-content">
-          <h3>Certificate on Rights of Children</h3>
-          <p class="organization">Issued by: La Plage Meta Verse.</p>
-          <p class="date">Date: June 2023.</p>
-      </div>
-    </div>
-   </section>
+</section>
 
      <!-- conferences -->
   <section class="section__container conferences__container" id="workshops">
@@ -439,84 +243,84 @@
     </section>
 
 
- <!-- galery -->
- <section class="section__container gallery__container" id="package">
-  <h2 class="section__header">Photo <span>Gallery</span></h2>
-  <!-- Slider main container -->
-  <div class="swiper">
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e1.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e10.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e3.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e23.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e2.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e11.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e12.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e20.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e22.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e15.jpg" alt="popular" />
-        </div>
-      </div>
+    <section class="section__container gallery__container" id="package">
+      <h2 class="section__header">Photo <span>Gallery</span></h2>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e1.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e10.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e3.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e23.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e2.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e11.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e12.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e20.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e22.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e15.jpg" alt="popular" />
+            </div>
+          </div>
+          
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/l7.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e21.jpg" alt="popular" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="gallery__card">
+              <img src="./img/e16.jpg" alt="popular" />
+            </div>
+          </div>
       
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/l7.jpg" alt="popular" />
-        </div>
       </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e21.jpg" alt="popular" />
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="gallery__card">
-          <img src="./img/e16.jpg" alt="popular" />
-        </div>
-      </div>
-      
-  </div>
-</section>
 
+    </section>
+    
 
 <!-- contactss -->
 <section class="contact-section" id="contact">
@@ -558,6 +362,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="script.js"></script>
+  <script src="./welcome.js"></script>
 
 </body>
 </html>

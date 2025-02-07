@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Achievements Section */
+.achievements {
+    text-align: center;
+    padding: 50px 10px;
+}
+
+/* Achievements Title */
+.achieveh2 {
+    font-size: 30px;
+    position: relative;
+    color: #333;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+/* Pseudo Elements for Lines */
+.achieveh2::before,
+.achieveh2::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: var(--primary-color);
+    transition: all 0.4s ease-in-out;
+    top: 50%;
+}
+
+/* Left Line */
+.achieveh2::before {
+    left: -70px;
+}
+
+/* Right Line */
+.achieveh2::after {
+    right: -70px;
+}
+
+/* Hover Effect on Achievements Title */
+.achieveh2:hover::before,
+.achieveh2:hover::after {
+    width: 80px;
+    background: var(--primary-color); /* Gold on hover */
+}
+
+/* Flex Container for Boxes */
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Box Styling */
+.achievement-box {
+    width: 35%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Background Images */
+.achievement-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: all 0.6s ease-in;
+}
+
+/* Specific Images */
+.awards {
+    background-image: url('./img/e19.jpg'); /* Replace with actual image */
+}
+
+.qualifications {
+    background-image: url('./img/l5.jpg'); /* Replace with actual image */
+}
+
+/* Title Styling */
+.achievement-image h2 {
+    position: relative;
+    bottom: 20px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    background: transparent;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+/* Pseudo Elements for Lines */
+.achievement-image h2::before,
+.achievement-image h2::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: white;
+    transition: all 0.4s ease-in-out;
+    top: 50%;
+}
+
+/* Left Line */
+.achievement-image h2::before {
+    left: -60px;
+}
+
+/* Right Line */
+.achievement-image h2::after {
+    right: -60px;
+}
+
+/* Pentagon Shape - Centered */
+.achievement-image h2 span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: white;
+    clip-path:  polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    top: 3px;
+    margin: 0 10px;
+}
+
+/* Hover Effects */
+.achievement-box:hover h2::before,
+.achievement-box:hover h2::after {
+    width: 70px; /* Lines extend */
+    background: var(--primary-color); /* Change to primary color */
+}
+
+.achievement-box:hover h2 span {
+    background: var(--primary-color); /* Pentagon turns primary color */
+    transform: scale(1.2); /* Slight enlargement */
+}
+
+/* Hover Effects */
+.achievement-box:hover .achievement-image {
+    transform: scale(1.1);
+    filter: grayscale(100%);
+}
+
+.achievement-box:hover h2 {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .achievement-box {
+        width: 90%;
+        height: 450px;
+    }
+
+    .achievement-image h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .achievement-box {
+        width: 100%;
+        height: 400px;
+    }
+
+    .achievement-image h2 {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .achievement-box {
+        width: 100%;
+        height: 620px;
+    }
+}

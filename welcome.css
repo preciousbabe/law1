@@ -1,0 +1,237 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.welcome-section {
+    background-color: #f8f9fa;
+}
+
+/* Main Container */
+.welcome-container {
+    display: flex;
+    margin: 0 auto;
+    width: 80vw;
+    height: 100vh;
+    padding: 20px; /* Added padding for better alignment */
+    gap: 20px; /* Space between slideshow and welcome card */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+/* Slideshow Container (75% width) */
+.welcome-slideshow {
+    width: 60%;
+    height: 70vh; /* Adjusted for padding */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Slideshow Images */
+.welcome-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.welcome-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Navigation Buttons */
+.welcome-prev, .welcome-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.welcome-prev {
+    left: 15px;
+}
+
+.welcome-next {
+    right: 15px;
+}
+
+.welcome-prev:hover, .welcome-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Welcome Card (25% width) */
+.welcome-card {
+    width: 30%;
+    height: 95vh; /* Adjusted for padding */
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Circular Owner Image */
+.welcome-owner-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid var(--primary-color);
+}
+
+/* Welcome Card Text */
+.welcome-card h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.welcome-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+/* Fade Animation */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+
+.welcome__socials{
+    display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.welcome__socials a{
+    padding: 6px 10px;
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    border-radius: 100%;
+}
+
+.welcome__socials a:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+  }
+
+/* For Tablets & Small Screens */
+@media screen and (max-width: 1024px) {
+    .welcome-container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .welcome-slideshow, 
+    .welcome-card {
+        width: 100%;
+        height: auto;
+    }
+
+    .welcome-card {
+        padding: 20px;
+    }
+
+    .welcome-owner-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .welcome-card h2 {
+        font-size: 22px;
+    }
+
+    .welcome-card p {
+        font-size: 14px;
+    }
+}
+
+/* For Mobile Devices */
+@media screen and (max-width: 768px) {
+    .welcome-container {
+        flex-direction: column;
+        padding: 5px;
+        gap: 5px;
+    }
+
+    .welcome-slideshow { 
+        height: 50vh; 
+    }
+
+    .welcome-card {
+        padding: 15px;
+    }
+
+    .welcome-prev, .welcome-next {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .welcome-owner-img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .welcome-card h2 {
+        font-size: 30px;
+    }
+
+    .welcome-card p {
+        font-size: 23px;
+    }
+}
+
+/* Extra Small Devices (Phones) */
+@media screen and (max-width: 480px) {
+    .welcome-slideshow {
+        height: 60vh;
+    }
+
+    .welcome-card {
+        padding: 25px 10px;
+    }
+
+    .welcome-owner-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .welcome-card h2 {
+        font-size: 22px;
+    }
+
+    .welcome-card p {
+        font-size: 17px;
+    }
+
+    .welcome-prev, .welcome-next {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
