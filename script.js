@@ -66,7 +66,25 @@ const scrollRevealOption = {
   ScrollReveal().reveal(".hero h1", {
     ...scrollRevealOption,
     origin: "left",
+    interval: 500,
     delay: 500,
+  });
+  ScrollReveal().reveal(".welcome-slideshow", {
+    ...scrollRevealOption,
+    origin: "right",
+    interval: 500,
+    delay: 500,
+  });
+  ScrollReveal().reveal(".welcome-card", {
+    ...scrollRevealOption,
+    origin: "left",
+    delay: 500,
+  });
+  ScrollReveal().reveal(".achieveh2", {
+    ...scrollRevealOption,
+  });
+  ScrollReveal().reveal(".achievement-box", {
+    ...scrollRevealOption,
   });
   
   ScrollReveal().reveal(".skills__image img", {
@@ -102,11 +120,13 @@ const scrollRevealOption = {
   
 
 
-  const swiper = new Swiper(".swiper", {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    loop: true,
-  });
+  document.addEventListener("DOMContentLoaded", function () {
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        spaceBetween: 0,
+        loop: true,
+    });
+});
 
 
   const next = document.getElementById("next");
