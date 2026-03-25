@@ -610,18 +610,18 @@ body {
 
 /* ================= GALLERY SECTION ================= */
 .section__container.gallery__container {
-  padding-block: 4rem 3rem;
+  padding-block: 4rem 4rem;
 }
 
 .section__header {
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 /* ================= SWIPER ================= */
 .gallery-swiper {
-  padding-bottom: 3.5rem;   /* Space for pagination */
+  padding-bottom: 4rem;
 }
 
 /* ================= CARD ================= */
@@ -629,24 +629,17 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
-  cursor: pointer;
   background: #000;
-  aspect-ratio: 16 / 10;     /* Better control - change if your photos are mostly portrait */
-  /* You can also use 4/3, 16/9, or 1/1 depending on your image style */
+  height: 380px;                    /* Increased default height */
 }
 
 .gallery__card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* This is key - prevents cutting off important parts */
+  object-fit: cover;
+  object-position: center;          /* Change to "top" if top of images are still cut off */
   display: block;
   transition: transform 0.6s ease, filter 0.4s ease;
-}
-
-/* Optional: If you want to show more of the top part of images */
-.gallery__card img {
-  object-position: center;   /* Default: center. Try "top" if top is always cut off */
-  /* object-position: top; */
 }
 
 /* HOVER EFFECT */
@@ -657,7 +650,7 @@ body {
 
 /* ================= PAGINATION ================= */
 .swiper-pagination {
-  bottom: 0 !important;
+  bottom: 12px !important;
 }
 
 .swiper-pagination-bullet {
@@ -673,52 +666,64 @@ body {
   height: 10px;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) {
+/* ================= RESPONSIVE - Increased Heights ================= */
+
+/* Large Desktop */
+@media (min-width: 1025px) {
   .gallery__card {
-    aspect-ratio: 16 / 9.5;     /* Slightly taller on tablets */
+    height: 460px;                  /* Taller on big screens */
   }
 }
 
+/* Tablets & Medium screens */
+@media (max-width: 1024px) {
+  .gallery__card {
+    height: 420px;                  /* Increased for tablets */
+  }
+  
+  .section__header {
+    font-size: 2.3rem;
+  }
+}
+
+/* Mobile - Main adjustment area */
 @media (max-width: 768px) {
+  .gallery__card {
+    height: 380px;                  /* Increased - this is what you'll see most on phones */
+  }
+  
   .section__header {
     font-size: 2.2rem;
   }
-  
-  .gallery__card {
-    aspect-ratio: 16 / 10;
-  }
 }
 
+/* Small phones */
 @media (max-width: 480px) {
-  .section__header {
-    font-size: 1.9rem;
-    margin-bottom: 2rem;
-  }
-  
   .gallery__card {
-    aspect-ratio: 4 / 3;        /* Good balance for mobile - less likely to cut top */
+    height: 340px;                  /* Still decent size on very small screens */
     border-radius: 10px;
   }
   
+  .section__header {
+    font-size: 1.95rem;
+    margin-bottom: 2.5rem;
+  }
+  
   .gallery-swiper {
-    padding-bottom: 3rem;
+    padding-bottom: 3.2rem;
   }
 }
 
-/* Lightbox */
+/* ================= LIGHTBOX ================= */
 #lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.92);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.93);
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  padding: 1rem;
+  padding: 15px;
 }
 
 #lightbox img {
@@ -730,14 +735,13 @@ body {
 
 #lightbox #close {
   position: absolute;
-  top: 20px;
-  right: 25px;
-  color: white;
-  font-size: 2.5rem;
+  top: 25px;
+  right: 30px;
+  color: #fff;
+  font-size: 2.8rem;
   cursor: pointer;
   z-index: 10000;
 }
-
 
 #close {
   position: absolute;
