@@ -6,7 +6,7 @@
   <title>Lawyer's Personal Website</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="stlye.css">
   <link rel="stylesheet" href="./welcome.css">
   <link rel="stylesheet" href="./achive.css">
@@ -243,84 +243,60 @@
     </section>
 
 
-    <section class="section__container gallery__container" id="package">
-      <h2 class="section__header">Photo <span>Gallery</span></h2>
-      <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e1.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e10.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e3.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e23.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e2.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e11.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e12.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e20.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e22.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e15.jpg" alt="photo" />
-            </div>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/l7.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e21.jpg" alt="photo" />
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="gallery__card">
-              <img src="./img/e16.jpg" alt="photo" />
-            </div>
-          </div>
-      
+   <!-- ====================== PHOTO GALLERY SECTION ====================== -->
+<section class="section__container gallery__container" id="package">
+  <h2 class="section__header">Photo <span>Gallery</span></h2>
+
+  <!-- Swiper Container -->
+  <div class="swiper gallery-swiper">
+    
+    <!-- Swiper Wrapper -->
+    <div class="swiper-wrapper">
+
+      <!-- All your images as slides -->
+      <div class="swiper-slide">
+        <div class="gallery__card">
+          <img src="./img/e1.jpg" alt="Event photo 1" />
+        </div>
       </div>
 
-    </section>
-    
+      <div class="swiper-slide">
+        <div class="gallery__card">
+          <img src="./img/e10.jpg" alt="Event photo 2" />
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="gallery__card">
+          <img src="./img/e3.jpg" alt="Event photo 3" />
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="gallery__card">
+          <img src="./img/e23.jpg" alt="Event photo 4" />
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="gallery__card">
+          <img src="./img/e2.jpg" alt="Event photo 5" />
+        </div>
+      </div>
+
+     
+    </div>
+
+    <!-- Pagination Dots -->
+    <div class="swiper-pagination"></div>
+
+  </div>
+</section>   
+
+<div id="lightbox">
+  <span id="close">&times;</span>
+  <img id="lightbox-img" src="" />
+</div>
 
 <!-- contactss -->
 <section class="contact-section" id="contact">
@@ -360,7 +336,7 @@
 
 
 <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
   <script src="./welcome.js"></script>
 
