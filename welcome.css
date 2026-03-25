@@ -72,7 +72,7 @@
 /* Welcome Card (25% width) */
 .welcome-card {
     width: 30%;
-    height: 95vh; /* Adjusted for padding */
+    height: 100vh; /* Adjusted for padding */
     background: white;
     display: flex;
     flex-direction: column;
