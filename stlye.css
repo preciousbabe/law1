@@ -33,12 +33,12 @@ body {
     padding: 50px 0;
   }
   h1{
-    line-height: 1.4; /* Controls the spacing between lines of text */
-    letter-spacing: 1px; /* Adds spacing between each character */
-    text-transform: capitalize; /* Capitalizes each word */
-    color: #333; /* Dark color for text contrast */
+    line-height: 1.4; 
+    letter-spacing: 1px; 
+    text-transform: capitalize;
+    color: #333; 
     margin: 0;
-    padding: 20px 0; /* Adds padding for spacing */
+    padding: 20px 0;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -607,88 +607,137 @@ body {
   color: #0077ff;
 }
 
+
+/* ================= GALLERY SECTION ================= */
+.section__container.gallery__container {
+  padding-block: 4rem 3rem;
+}
+
+.section__header {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
 /* ================= SWIPER ================= */
 .gallery-swiper {
-  padding-bottom: 3rem;
+  padding-bottom: 3.5rem;   /* Space for pagination */
 }
 
 /* ================= CARD ================= */
 .gallery__card {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
   background: #000;
+  aspect-ratio: 16 / 10;     /* Better control - change if your photos are mostly portrait */
+  /* You can also use 4/3, 16/9, or 1/1 depending on your image style */
 }
 
-/* IMAGE STYLE */
 .gallery__card img {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: cover;         /* This is key - prevents cutting off important parts */
   display: block;
   transition: transform 0.6s ease, filter 0.4s ease;
 }
 
-/* HOVER EFFECT */
-.gallery__card:hover img {
-  transform: scale(1.1);
-  filter: brightness(0.8);
+/* Optional: If you want to show more of the top part of images */
+.gallery__card img {
+  object-position: center;   /* Default: center. Try "top" if top is always cut off */
+  /* object-position: top; */
 }
 
+/* HOVER EFFECT */
+.gallery__card:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.85);
+}
 
 /* ================= PAGINATION ================= */
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
 .swiper-pagination-bullet {
   background: #ccc;
   opacity: 1;
+  width: 10px;
+  height: 10px;
 }
 
 .swiper-pagination-bullet-active {
   background: #0077ff;
+  width: 10px;
+  height: 10px;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-  .gallery__card img {
-    height: 220px;
+  .gallery__card {
+    aspect-ratio: 16 / 9.5;     /* Slightly taller on tablets */
   }
 }
 
 @media (max-width: 768px) {
-  .gallery__card img {
-    height: 200px;
+  .section__header {
+    font-size: 2.2rem;
+  }
+  
+  .gallery__card {
+    aspect-ratio: 16 / 10;
   }
 }
 
 @media (max-width: 480px) {
-  .gallery__card img {
-    height: 180px;
-  }
-
   .section__header {
-    font-size: 2rem;
+    font-size: 1.9rem;
+    margin-bottom: 2rem;
+  }
+  
+  .gallery__card {
+    aspect-ratio: 4 / 3;        /* Good balance for mobile - less likely to cut top */
+    border-radius: 10px;
+  }
+  
+  .gallery-swiper {
+    padding-bottom: 3rem;
   }
 }
 
-
+/* Lightbox */
 #lightbox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.92);
   display: none;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 9999;
+  padding: 1rem;
 }
 
 #lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 10px;
+  max-width: 95%;
+  max-height: 92%;
+  border-radius: 12px;
+  object-fit: contain;
 }
+
+#lightbox #close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10000;
+}
+
 
 #close {
   position: absolute;
